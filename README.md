@@ -14,6 +14,10 @@ viewblock-example
 		<td>常规</td>
 	</tr>
 	<tr>
+		<td>viewblock-example/index.jsp?name=zhangsang</td>
+		<td>常规 viewblock 传参</td>
+	</tr>
+	<tr>
 		<td>viewblock-example/group.jsp</td>
 		<td>分组</td>
 	</tr>
