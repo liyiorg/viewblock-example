@@ -3,31 +3,15 @@ viewblock-example
 
 viewblock-example
 
+### MAVEN è¿è¡Œ
+* tomcat tomcat7:run
+* jetty jetty:run
 
-
-ÔËĞĞËµÃ÷
---------------
-
-<table>
-	<tr>
-		<td>viewblock-example/index.jsp</td>
-		<td>³£¹æ</td>
-	</tr>
-	<tr>
-		<td>viewblock-example/index.jsp?name=zhangsang</td>
-		<td>³£¹æ viewblock ´«²Î</td>
-	</tr>
-	<tr>
-		<td>viewblock-example/group.jsp</td>
-		<td>·Ö×é</td>
-	</tr>
-	<tr>
-		<td>viewblock-example/async.jsp</td>
-		<td>Òì²½</td>
-	</tr>
-	<tr>
-		<td>viewblock-example/async</td>
-		<td>Òì²½,serlvet ÔËĞĞ¿é</td>
-	</tr>
-
-</table>
+### URL è®¿é—®
+| url | è¯´æ˜ |
+|-|-|
+| http://localhost:8080/viewblock-example/index.jsp | åŒæ­¥ |
+| http://localhost:8080/viewblock-example/index.jsp?name=zhangsang | åŒæ­¥ä¼ å‚ |
+| http://localhost:8080/viewblock-example/group.jsp | åŒæ­¥ï¼ˆåç§°åˆ†ç»„ï¼‰ |
+| http://localhost:8080/viewblock-example/async.jsp | å¼‚æ­¥ |
+| http://localhost:8080/viewblock-example/async | å¼‚æ­¥ï¼ˆserlvetï¼‰ |
