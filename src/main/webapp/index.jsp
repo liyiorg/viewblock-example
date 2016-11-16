@@ -9,6 +9,7 @@
 <body style="padding-top: 60px">
 	<viewblock:block name="header"/>
 	<viewblock:block name="content"/>
-	<viewblock:block name="footer"/>
+	<%@include file="include.jsp" %>
 </body>
 </html>
+<viewblock:asyncFinish/>

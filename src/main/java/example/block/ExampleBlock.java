@@ -1,9 +1,9 @@
 package example.block;
 
-import viewblock.annotation.BRequestParam;
-import viewblock.annotation.Viewblock;
-import viewblock.annotation.ViewblockCollection;
-import viewblock.core.BModelMap;
+import com.github.liyiorg.viewblock.annotation.BRequestParam;
+import com.github.liyiorg.viewblock.annotation.Viewblock;
+import com.github.liyiorg.viewblock.annotation.ViewblockCollection;
+import com.github.liyiorg.viewblock.core.BModelMap;
 
 @ViewblockCollection
 public class ExampleBlock {
@@ -14,8 +14,8 @@ public class ExampleBlock {
 	}
 	
 	@Viewblock(name = "footer", template = "footer.ftl")
-	public void footer() {
-		
+	public String footer() {
+		return "footer.ftl";
 	}
 
 	@Viewblock(name = "content", template = "content.jsp")
