@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@taglib uri="/viewblock" prefix="viewblock"%>
-<viewblock:block name="header" async="true"/>
-<viewblock:block name="content" async="true"/>
-<viewblock:block name="footer" async="true"/>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -10,10 +10,11 @@
 <title>JPetStore Demo</title>
 </head>
 <body style="padding-top: 60px">
-	<viewblock:output name="header"/>
-	<viewblock:output name="content"/>
-	<viewblock:output name="footer"/>
+	<viewblock:block name="header"/>
+	<viewblock:block name="content">
+		<viewblock:param name="name" value="SLYH"/>
+		<viewblock:param name="h" value="123"/>
+	</viewblock:block>
+	<viewblock:block name="footer"/>
 </body>
 </html>
-<viewblock:asyncFinish/>
-<!-- 释放链接 ,很重要 -->

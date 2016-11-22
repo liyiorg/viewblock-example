@@ -8,7 +8,7 @@
 </head>
 <body style="padding-top: 60px">
 	<viewblock:block name="header"/>
-	<viewblock:output name="async:content"/>
+	<viewblock:output name="content"/>
 	<viewblock:block name="footer"/>
 </body>
 </html>

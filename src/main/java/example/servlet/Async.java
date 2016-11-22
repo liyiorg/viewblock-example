@@ -18,9 +18,9 @@ public class Async extends HttpServlet{
 			throws ServletException, IOException {
 		//jetty 中的异步使用
 		ViewblockExec viewblockExec = new ViewblockExec(httpServletRequest,httpServletResponse);
-		viewblockExec.asyncExec("async:content");
+		viewblockExec.asyncExec("content");
 		// TODO Auto-generated method stub
-		httpServletRequest.getRequestDispatcher("async2.jsp").forward(httpServletRequest, httpServletResponse);
+		httpServletRequest.getRequestDispatcher("asyncServlet.jsp").forward(httpServletRequest, httpServletResponse);
 	}
 
 	
