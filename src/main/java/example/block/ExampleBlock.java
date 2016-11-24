@@ -50,7 +50,7 @@ public class ExampleBlock {
 				"c2\t",c2,"\n"
 		};
 		try {
-			Thread.currentThread().sleep(2000);
+			Thread.currentThread().sleep(2500);
 			for(Object p : ps){
 				System.out.print(p);
 			}
