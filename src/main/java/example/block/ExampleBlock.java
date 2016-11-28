@@ -1,9 +1,12 @@
 package example.block;
 
+import com.github.liyiorg.viewblock.annotation.BModelAttribute;
 import com.github.liyiorg.viewblock.annotation.BRequestParam;
 import com.github.liyiorg.viewblock.annotation.Viewblock;
 import com.github.liyiorg.viewblock.annotation.ViewblockCollection;
 import com.github.liyiorg.viewblock.core.BModelMap;
+
+import example.TestBean;
 
 @ViewblockCollection
 public class ExampleBlock {
@@ -19,12 +22,15 @@ public class ExampleBlock {
 	}
 
 	@Viewblock(name = "content", template = "content.jsp")
-	public void content(@BRequestParam(required=false) String name,
+	public void content(
+			@BModelAttribute TestBean testBean,
+			@BRequestParam(required=false) String name,
 			@BRequestParam(required=false) String s,
+			@BRequestParam(required=false,defaultValue="1,2,3") Integer[] iss,
 			@BRequestParam(required=false) int i1,
 			@BRequestParam(required=false) Integer i2,
 			@BRequestParam(required=false) long l1,
-			@BRequestParam(required=false) Long l2,
+			@BRequestParam(required=false,defaultValue="") Long l2,
 			@BRequestParam(required=false) double d1,
 			@BRequestParam(required=false) Double d2,
 			@BRequestParam(required=false) float f1,
@@ -49,6 +55,15 @@ public class ExampleBlock {
 				"c1\t",c1,"\n",
 				"c2\t",c2,"\n"
 		};
+		if(iss != null){
+			for(int i:iss){
+				System.out.println(i+"  =======");
+			}
+		}
+		if(testBean != null){
+			System.out.println("testBean[name]:"+testBean.getName());
+			System.out.println("testBean[i2]:"+testBean.getI2());
+		}
 		try {
 			Thread.currentThread().sleep(2500);
 			for(Object p : ps){
