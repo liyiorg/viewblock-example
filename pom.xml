@@ -35,19 +35,25 @@
 			<version>1.2.16</version>
 		</dependency>
 		<dependency>
-    <groupId>javax.servlet</groupId>
-    <artifactId>jstl</artifactId>
-    <version>1.2</version>
-</dependency>
-		<!-- <dependency>
-    <groupId>javax.el</groupId>
-    <artifactId>javax.el-api</artifactId>
-    <version>3.0.0</version>
-</dependency> -->
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
 	</dependencies>
 
 	<build>
 		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+
 			<!-- mvn jetty:run -->
 			<plugin>
 				<groupId>org.eclipse.jetty</groupId>
