@@ -5,9 +5,7 @@ viewblock-example
 
 ### MAVEN run
 * tomcat   mvn tomcat7:run
-* jetty    
-  step1 config web.xml,open jsp servlet.
-  step2 mvn jetty:run
+* jetty    mvn jetty:run
 
 jetty:run
 
